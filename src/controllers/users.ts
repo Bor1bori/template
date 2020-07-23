@@ -1,5 +1,5 @@
 import express from 'express';
-import { wrapper } from '../utils/wrapper';
+import { wrapper } from '@src/utils/wrapper';
 
 /* GET users listing. */
 export const getUsers = wrapper(async (req: express.Request, res: express.Response, next: express.NextFunction) => {
