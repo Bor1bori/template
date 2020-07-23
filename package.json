@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "start": "npm run build & npm run windowsDebug ; node ./build/bin/www.js",
-    "dev": "npm run windowsDebug ; npx ts-node ./bin/www.ts",
-    "windowsDebug": "@powershell -Command $env:DEBUG='app'"
+    "start": "npm run build & set DEBUG=app & node ./build/bin/www.js",
+    "dev": "set DEBUG=app & npx ts-node ./bin/www.ts"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
