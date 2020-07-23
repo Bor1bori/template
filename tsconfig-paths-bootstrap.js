@@ -10,4 +10,3 @@ const cleanup = tsConfigPaths.register({
 });
 // When path registration is no longer needed
 // cleanup();
-setTimeout(cleanup, 1000)
