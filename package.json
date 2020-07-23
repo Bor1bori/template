@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "start": "npm run build & set DEBUG=app & node ./build/bin/www.js",
-    "dev": "set DEBUG=app & npx ts-node ./bin/www.ts"
+    "start": "npm run build & set DEBUG=app & node -r ./tsconfig-paths-bootstrap.js ./dist/bin/www.js",
+    "dev": "set DEBUG=app & npx ts-node -r tsconfig-paths/register ./bin/www.ts"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,6 +13,7 @@
     "express": "~4.16.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
