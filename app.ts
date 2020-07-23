@@ -14,4 +14,8 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 
+app.use((err: any, req: any, res: express.Response, next: express.NextFunction) => {
+  res.status(500).json({description: err.message, success: false});
+});
+
 export default app;
