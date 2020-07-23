@@ -59,7 +59,3 @@ export const aesDecrypt = (encryptedText: string) => {
     return null;
   }
 };
-
-const token = jwtSign({'s':'q'}, 100000);
-console.log(token)
-setTimeout(() => console.log(jwtVerify(token)), 0);
