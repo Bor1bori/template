@@ -18,7 +18,6 @@ const sequelize = new Sequelize({
   host: config.host,
   dialect: config.dialect as 'mariadb'
 });
-console.log(config)
 
 export const sequelizeInit = async () => {
   try {
