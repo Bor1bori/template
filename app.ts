@@ -1,10 +1,12 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import { sequelizeInit } from '@src/db/sequelize';
 
 import indexRouter from '@src/routes/index';
 
 
+sequelizeInit();
 
 const app = express();
 
